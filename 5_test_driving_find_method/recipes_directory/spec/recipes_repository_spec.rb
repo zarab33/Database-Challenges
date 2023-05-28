@@ -20,5 +20,23 @@ RSpec.describe RecipeRepository do
             expect(recipes.first.cooking_time_min).to eq '55'
             expect(recipes.first.rating).to eq '5'
         end
+
+        it "returns a single recipe" do
+            repo = RecipeRepository.new
+            recipes = repo.find(1)
+            
+            expect(recipes.name).to eq ('Jerk Chicken')
+            expect(recipes.cooking_time_min).to eq '55'
+            expect(recipes.rating).to eq '5'
+        end
+
+         it "returns the recipe curry goat" do
+            repo = RecipeRepository.new
+            recipes = repo.find(2)
+            
+            expect(recipes.name).to eq ('Curry Goat with Rice and Peas')
+            expect(recipes.cooking_time_min).to eq '210'
+            expect(recipes.rating).to eq '4'
+         end
     end
 end
