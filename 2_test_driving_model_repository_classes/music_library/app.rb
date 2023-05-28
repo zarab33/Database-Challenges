@@ -10,7 +10,7 @@ DatabaseConnection.connect('music_library')
 artist_repository = ArtistRepository.new
 album_repository = AlbumRepository.new
 
-album = album_repository.find(6)
+album = album_repository.find(1)
 
 puts album.id
 puts album.title
